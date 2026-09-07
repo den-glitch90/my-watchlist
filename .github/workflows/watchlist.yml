@@ -1,0 +1,79 @@
+# watchlist.yml
+#
+# WHAT THIS DOES
+# Runs watchlist_monitor.py every 6 hours on GitHub's own servers — so it
+# works even if your computer is off. Each run does two things:
+#   1. Emails you if something material changed (see watchlist_monitor.py)
+#   2. Rebuilds docs/index.html — a live dashboard page you can bookmark
+#      on your phone via GitHub Pages (step 5 below).
+#
+# ONE-TIME SETUP
+# 1. Create a new GitHub repository (can be private). github.com -> New.
+# 2. In that repo, create this exact folder structure:
+#        .github/workflows/watchlist.yml   <- this file
+#        watchlist_monitor.py              <- the script
+#        requirements.txt                  <- just the line: yfinance
+#    (the docs/ folder and its index.html get created automatically by
+#    the script the first time it runs — you don't need to make it)
+#
+# 3. Add your email credentials as encrypted secrets (NOT in the code):
+#    Repo -> Settings -> Secrets and variables -> Actions -> New repository secret.
+#    Create these four secrets:
+#        SENDER_EMAIL, SENDER_APP_PASSWORD, RECIPIENT_EMAIL, SMTP_SERVER
+#
+# 4. Commit this file. GitHub starts running it on the schedule below.
+#    You can also trigger it manually from the "Actions" tab any time.
+#
+# 5. Turn on GitHub Pages so your phone has a live URL to open:
+#    Repo -> Settings -> Pages -> Source: "Deploy from a branch" ->
+#    Branch: main, Folder: /docs -> Save.
+#    GitHub gives you a URL like https://yourusername.github.io/reponame/
+#    Open that on your phone once, then use your browser's
+#    "Add to Home Screen" so it sits on your phone like an app icon.
+#    Every 6 hours the page content updates on GitHub's end — just
+#    reopen it (or pull to refresh) to see the latest numbers.
+#
+# NOTE ON TIMING: GitHub Actions cron schedules are UTC and are "best
+# effort" — during busy periods a run might fire a few minutes late.
+# That's normal and fine for this use case.
+
+name: Watchlist Monitor
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours, on the hour, UTC
+  workflow_dispatch: {}       # lets you also trigger it manually from the Actions tab
+
+permissions:
+  contents: write   # needed so the workflow can save the state file + dashboard page back to the repo
+
+jobs:
+  check-watchlist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the watchlist check and rebuild the dashboard
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_APP_PASSWORD: ${{ secrets.SENDER_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        run: python watchlist_monitor.py
+
+      - name: Save the updated state and dashboard back to the repo
+        run: |
+          git config user.name "watchlist-bot"
+          git config user.email "actions@github.com"
+          git add watchlist_state.json docs/index.html
+          git diff --quiet --cached || git commit -m "Update watchlist state + dashboard [skip ci]"
+          git push
