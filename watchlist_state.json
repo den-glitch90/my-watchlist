@@ -1,0 +1,107 @@
+{
+  "NVDA": {
+    "type": "stock",
+    "price": 230.36,
+    "one_yr_return": 0.3810729481970246,
+    "fetched_at": "2026-09-07T13:50",
+    "revenue_growth_pct": 1.059,
+    "profit_margin_pct": 0.63663,
+    "pe_ratio": 29.159492,
+    "free_cash_flow": 41809874944,
+    "total_debt": 38860001280,
+    "total_cash": 62469001216,
+    "total_revenue": 302970011648
+  },
+  "AMD": {
+    "type": "stock",
+    "price": 477.57,
+    "one_yr_return": 2.1597856904379973,
+    "fetched_at": "2026-09-07T13:50",
+    "revenue_growth_pct": 0.501,
+    "profit_margin_pct": 0.15577,
+    "pe_ratio": 121.82908,
+    "free_cash_flow": 8841499648,
+    "total_debt": 4276000000,
+    "total_cash": 13111000064,
+    "total_revenue": 41305001984
+  },
+  "INTC": {
+    "type": "stock",
+    "price": 95.8,
+    "one_yr_return": 2.9118008961657,
+    "fetched_at": "2026-09-07T13:50",
+    "revenue_growth_pct": 0.254,
+    "profit_margin_pct": -0.19794,
+    "pe_ratio": null,
+    "free_cash_flow": 4866375168,
+    "total_debt": 50537000960,
+    "total_cash": 29727000576,
+    "total_revenue": 57031999488
+  },
+  "VOO": {
+    "type": "etf",
+    "price": 708.01,
+    "one_yr_return": 0.20406741012754565,
+    "fetched_at": "2026-09-07T13:50",
+    "expense_ratio": 0.03,
+    "dividend_yield": 0.0104,
+    "total_assets": 1741139869696
+  },
+  "QQQ": {
+    "type": "etf",
+    "price": 718.96,
+    "one_yr_return": 0.2540755129816815,
+    "fetched_at": "2026-09-07T13:50",
+    "expense_ratio": 0.18,
+    "dividend_yield": 0.0042,
+    "total_assets": 488981004288
+  },
+  "SMH": {
+    "type": "etf",
+    "price": 567.01,
+    "one_yr_return": 0.9393559071557532,
+    "fetched_at": "2026-09-07T13:50",
+    "expense_ratio": 0.35,
+    "dividend_yield": 0.002,
+    "total_assets": 67787030528
+  },
+  "CRDO": {
+    "type": "stock",
+    "price": 170.57,
+    "one_yr_return": 0.211262593755621,
+    "fetched_at": "2026-09-07T13:50",
+    "revenue_growth_pct": 1.147,
+    "profit_margin_pct": 0.33833,
+    "pe_ratio": 59.84913,
+    "free_cash_flow": 248290880,
+    "total_debt": 26205000,
+    "total_cash": 764257984,
+    "total_revenue": 1591044992
+  },
+  "ASTS": {
+    "type": "stock",
+    "price": 62.31,
+    "one_yr_return": 0.4692289931025128,
+    "fetched_at": "2026-09-07T13:50",
+    "revenue_growth_pct": 26.266,
+    "profit_margin_pct": 0.0,
+    "pe_ratio": null,
+    "free_cash_flow": -1799572992,
+    "total_debt": 2993731072,
+    "total_cash": 2288252928,
+    "total_revenue": 115299000
+  },
+  "SOUN": {
+    "type": "stock",
+    "price": 6.74,
+    "one_yr_return": -0.5273492522484577,
+    "fetched_at": "2026-09-07T13:50",
+    "revenue_growth_pct": 0.45,
+    "profit_margin_pct": -0.6745,
+    "pe_ratio": null,
+    "free_cash_flow": -45495500,
+    "total_debt": 5438000,
+    "total_cash": 202776000,
+    "total_revenue": 203200000
+  }
+}
