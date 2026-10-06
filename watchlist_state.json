@@ -2,8 +2,8 @@
   "NVDA": {
     "type": "stock",
     "price": 238.9,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": 0.2906777774049797,
+    "fetched_at": "2026-10-06T06:12",
     "revenue_growth_pct": 1.059,
     "profit_margin_pct": 0.63663,
     "pe_ratio": 30.202276,
@@ -15,8 +15,8 @@
   "AMD": {
     "type": "stock",
     "price": 631.75,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": 2.101222223645407,
+    "fetched_at": "2026-10-06T06:12",
     "revenue_growth_pct": 0.501,
     "profit_margin_pct": 0.15577,
     "pe_ratio": 161.1607,
@@ -28,8 +28,8 @@
   "INTC": {
     "type": "stock",
     "price": 116.19,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": 2.1754578288294573,
+    "fetched_at": "2026-10-06T06:12",
     "revenue_growth_pct": 0.254,
     "profit_margin_pct": -0.19794,
     "pe_ratio": null,
@@ -41,35 +41,35 @@
   "VOO": {
     "type": "etf",
     "price": 712.32,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": 0.16703183959257162,
+    "fetched_at": "2026-10-06T06:12",
     "expense_ratio": 0.03,
-    "dividend_yield": 0.0104,
-    "total_assets": 1756880437248
+    "dividend_yield": 0.0106,
+    "total_assets": 1738356162560
   },
   "QQQ": {
     "type": "etf",
     "price": 756.2,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": 0.2501900575147238,
+    "fetched_at": "2026-10-06T06:12",
     "expense_ratio": 0.18,
     "dividend_yield": 0.0042,
-    "total_assets": 488981004288
+    "total_assets": 498945982464
   },
   "SMH": {
     "type": "etf",
     "price": 633.9,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": 0.8518040473129427,
+    "fetched_at": "2026-10-06T06:12",
     "expense_ratio": 0.35,
-    "dividend_yield": 0.002,
-    "total_assets": 67787030528
+    "dividend_yield": 0.0018000001,
+    "total_assets": 74879844352
   },
   "CRDO": {
     "type": "stock",
     "price": 212.48,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": 0.4413240969114252,
+    "fetched_at": "2026-10-06T06:12",
     "revenue_growth_pct": 1.147,
     "profit_margin_pct": 0.33833,
     "pe_ratio": 75.34752,
@@ -81,8 +81,8 @@
   "ASTS": {
     "type": "stock",
     "price": 58.44,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": -0.19835394508238438,
+    "fetched_at": "2026-10-06T06:12",
     "revenue_growth_pct": 26.266,
     "profit_margin_pct": 0.0,
     "pe_ratio": null,
@@ -94,8 +94,8 @@
   "SOUN": {
     "type": "stock",
     "price": 5.88,
-    "one_yr_return": NaN,
-    "fetched_at": "2026-10-06T00:14",
+    "one_yr_return": -0.6778082129073469,
+    "fetched_at": "2026-10-06T06:12",
     "revenue_growth_pct": 0.45,
     "profit_margin_pct": -0.6745,
     "pe_ratio": null,
